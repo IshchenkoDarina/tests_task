@@ -6,8 +6,8 @@ services:
     volumes:
       - .:/code
     env_file: ./tests_task/.env
-    expose:
-      - 8000
+    ports:
+      - 8000:8000
     depends_on:
       - db
   db:

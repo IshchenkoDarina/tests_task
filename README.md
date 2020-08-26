@@ -1,3 +1,6 @@
+### Heroku
+http://tests-task.herokuapp.com/
+
 ### Setup steps
 1. clone repository
 2. cp /project/dir/tests_task/.env.example /project/dir/tests_task/.env
@@ -5,4 +8,5 @@
 4. docker-compose up -d --build
 
 ### Postman collection
-https://www.getpostman.com/collections/648e4834acce858da9f5
+https://www.postman.com/collections/3e2dbfc90d201ee187e6
+
