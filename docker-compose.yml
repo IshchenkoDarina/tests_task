@@ -1,0 +1,22 @@
+version: '3.7'
+services:
+  web:
+    build: .
+    command: bash init.sh
+    volumes:
+      - .:/code
+    env_file: ./tests_task/.env
+    expose:
+      - 8000
+    depends_on:
+      - db
+  db:
+    image: postgres:12.0-alpine
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    env_file: ./tests_task/.env.db
+
+volumes:
+  postgres_data:
